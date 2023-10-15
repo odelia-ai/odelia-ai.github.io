@@ -44,7 +44,7 @@ extra_css:
 extra:
   analytics:
     provider: google
-    property: G-XXXXXXXXXX
+    property: G-MVCEFS3QLE
     feedback:
       title: Was this page helpful?
       ratings:
