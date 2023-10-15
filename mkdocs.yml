@@ -1,0 +1,118 @@
+site_name: Swarm Learning Documentation
+repo_url: https://github.com/KatherLab/swarm-learning-hpe
+repo_name: swarm-learning-hpe
+theme:
+  name: material
+  font:
+    text: Open Sans
+  language: en
+  logo: assets/images/logo_odelia_small.png
+  favicon: assets/images/favicon.png
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: custom
+      accent: custom
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: custom
+      accent: custom
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+extra_css:
+  - assets/css/extra.css   
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    cookies:
+      analytics: Google Analytics
+      github: Github
+  generator: false
+  social:
+    - icon: fontawesome/brands/twitter 
+      link: https://fosstodon.org/@squidfunk
+      name: ODELIA Twitter
+    - icon: fontawesome/brands/github 
+      link: https://fosstodon.org/@squidfunk
+      name: squidfunk on Fosstodon
+    - icon: fontawesome/brands/linkedin 
+      link: https://fosstodon.org/@squidfunk
+      name: squidfunk on Fosstodon
+  status:
+    <identifier>: <description>
+copyright: >
+  Copyright &copy; 2016 - 2023 Martin Donath –
+  <a href="#__consent">Change cookie settings</a>
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
