@@ -7,6 +7,9 @@ status: new
 
 # Setup
 
+!!! info 
+    https://github.com/HewlettPackard/swarm-learning
+
 ### Prerequisites
 #### Hardware recommendations
 * 64 GB of RAM (32 GB is the absolute minimum)

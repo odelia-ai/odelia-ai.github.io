@@ -1,13 +1,20 @@
 site_name: Swarm Learning Documentation
+
 repo_url: https://github.com/KatherLab/swarm-learning-hpe
+
 repo_name: swarm-learning-hpe
+
 theme:
   name: material
+
   font:
     text: Open Sans
   language: en
+
   logo: assets/images/logo_odelia_small.png
+
   favicon: assets/images/favicon.png
+
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -23,6 +30,7 @@ theme:
         name: Switch to light mode
       primary: custom
       accent: custom
+      
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -39,8 +47,7 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
-extra_css:
-  - assets/css/extra.css   
+
 extra:
   analytics:
     provider: google
@@ -59,6 +66,7 @@ extra:
           note: >- 
             Thanks for your feedback! Help us improve this page by
             using our <a href="https://github.com/odelia-ai/odelia-ai.github.io/issues" target="_blank" rel="noopener">feedback form</a>.
+  
   consent:
     title: Cookie consent
     description: >- 
@@ -69,41 +77,37 @@ extra:
     cookies:
       analytics: Google Analytics
       github: Github
-  generator: false
+  
   social:
-    - icon: fontawesome/brands/twitter 
-      link: https://fosstodon.org/@squidfunk
-      name: ODELIA Twitter
-    - icon: fontawesome/brands/github 
-      link: https://fosstodon.org/@squidfunk
-      name: squidfunk on Fosstodon
+    - icon: fontawesome/solid/globe
+      link: https://odelia.ai
+      name: ODELIA Website
+    - icon: fontawesome/brands/x-twitter 
+      link: https://twitter.com/ODELIA_ai
+      name: ODELIA on X
     - icon: fontawesome/brands/linkedin 
-      link: https://fosstodon.org/@squidfunk
-      name: squidfunk on Fosstodon
+      link: https://www.linkedin.com/showcase/odelia-project
+      name: ODELIA on LinkedIn
+    - icon: fontawesome/brands/github 
+      link: https://github.com/odelia-ai
+      name: ODELIA on Github
+  
+  generator: false
+
   status:
     <identifier>: <description>
+
 copyright: >
-  Copyright &copy; 2016 - 2023 Martin Donath –
+  Copyright &copy; 2023 ODELIA Consortium –
   <a href="#__consent">Change cookie settings</a>
 
+extra_css:
+  - assets/css/extra.css
+
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-          - name: mermaid
-            class: mermaid
-            format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
   - md_in_html
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.tabbed:
-      alternate_style: true
+  - admonition
   - tables
   - footnotes
   - pymdownx.critic
@@ -111,6 +115,20 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
