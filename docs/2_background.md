@@ -34,7 +34,7 @@ Swarm learning can play a vital role in **improving the accuracy of artificial i
 
 Today, the huge volumes of data generated and collected at different edge locations creates a **challenge** for a traditional, **centralized machine learning approach**. These algorithms need data to be in a consolidated location, but moving large amounts of data from **multiple sources** to a single location introduces **security risks** and **latency concerns**.
 Swarm learning’s decentralized approach allows data to be applied to AI models closer to the source, with **only the learnings being moved**. **Blockchain technology** enables multiple edge locations, collectively called a **swarm**, to share insights with one another in a **trusted manner** and prevents bad actors from gaining **unauthorized access** to the swarm.
-This **decentralized approach** allows models to generate answers**more quickly** and organizations to have greater opportunities for **shared learning**, even outside their own four walls. At the same time, the **privacy of source data is protected**, because data movement is limited. This also **reduces data sprawl**, as data does not need to be duplicated to a core or central location.
+This **decentralized approach** allows models to generate answers **more quickly** and organizations to have greater opportunities for **shared learning**, even outside their own four walls. At the same time, the **privacy of source data is protected**, because data movement is limited. This also **reduces data sprawl**, as data does not need to be duplicated to a core or central location.
 By training models and harnessing insights at the edge, organizations can make decisions more quickly, where they are most relevant, resulting in better outcomes. Dataset sizes available to models can increase, making them more reliable and less prone to biases. At the same time, data governance and privacy are preserved.
 
 !!! tip "Explanation Video"
@@ -124,7 +124,7 @@ A **Taskrunner** is an instance of Ethereum smart contract used to coordinate ex
 4. SL node **starts a file server** and **announces to the SN node that it is ready to run the training program**.
 5. **Waits** for the User ML component to start the ML model training.
 
-**SL node** works in collaboration with all the other **SL nodes** in the network. It regularly shares its learnings with the other nodes and incorporates their insights. Users can control the periodicity of this sharing by defining a **Synchronization Frequency**(from now on referred to as, sync frequency.) This frequency specifies the number of training batches after which the nodes share their learnings.
+**SL node** works in collaboration with all the other **SL nodes** in the network. It regularly shares its learnings with the other nodes and incorporates their insights. Users can control the periodicity of this sharing by defining a **Synchronization Frequency** (from now on referred to as, sync frequency.) This frequency specifies the number of training batches after which the nodes share their learnings.
 
 !!! note "Sync Frequency"
     Specifying a large value reduces the rate of synchronization and a small value increases it. Frequent synchronization slows down the training process while infrequent ones may reduce the accuracy of the final model. Therefore, the sync frequency must be treated as a hyperparameter and chosen with some caution.

@@ -15,7 +15,7 @@ status:
 
 HPE Swarm Learning can run on any hardware that supports executing container software (Docker).
 
-#### Hardware
+### Hardware
 - Any x86-64 hardware
 - System memory of 32 GB or more
 - Hard disk space of 200 GB or more
@@ -24,9 +24,8 @@ HPE Swarm Learning can run on any hardware that supports executing container sof
 !!! note
     HPE Swarm Learning can be deployed with Nvidia GPUs (accelerator cards) and AMD GPUS (accelerator cards).
 
-#### Supported Operating Systems and Platforms
-- HPE recommends that you run each Swarm Network node, and Swarm Learning node on dedicated systems to get the best performance from the platform.
-- The recommended requirements for each system are as follows:
+### Supported Operating Systems and Platforms
+HPE recommends that you run each Swarm Network node, and Swarm Learning node on dedicated systems to get the best performance from the platform. The recommended requirements for each system are as follows:
   
 !!! note
     The requirements of system running the user ML node is driven by the complexity of the ML algorithm. GPUs may also be needed.
@@ -54,8 +53,8 @@ HPE Swarm Learning can run on any hardware that supports executing container sof
   
 #### Container Hosting Platform
 - HPE Swarm Learning is qualified with Docker 20.10.5.
-- Configure Docker to run as a non-root user. For more details, see Manage Docker as a non-root user.
-- Configure network proxy settings for Docker. For more details, see Http/https proxy.
+- Configure Docker to run as a non-root user.
+- Configure network proxy settings for Docker.
 - Configure Docker to use IPv4.
   
 #### Machine Learning Framework
@@ -64,20 +63,199 @@ HPE Swarm Learning can run on any hardware that supports executing container sof
 #### Multi System Cluster Requirements
 - Synchronized time across all systems using NTP.
 
+## System preparation
+
+!!! info "Operating system"
+    All the following instructions are only tested on **Ubuntu**.
+
+1. Update the system with **`Software Updater`** or in via **`terminal`** with:
+    ```sh
+    sudo apt update
+    ```
+    ```sh
+    sudo apt upgrade
+    ```
+   
+2. Install the **Nvidia driver** via `Software Updater → Settings → Additonal Drivers → NVIDIA driver metapackage from nvidia-driver-525 (proprietary) -> Apply Changes`.
+   
+3. **Restart** the System.
+   
+4. Test the successful driver installation with:
+    ```sh
+    nvidia-smi
+    ```
+   
+5. Install **SSH** with:
+    ```sh
+    sudo apt install openssh-client openssh-server
+    ```
+   
+6. Install **Git** with:
+    ```sh
+    sudo apt install git
+    ```
+   
+7. Install **Curl** with:
+    ```sh
+    sudo apt install curl
+    ```
+   
+8. Install **Docker** with:
+    ```sh
+    curl -fsSL get.docker.com | sudo sh
+    ```
+
+## Creation of swarm user and Download of the repository
+
+1. **Create a user** named `swarm` and add it to the sudoers group:
+    ```sh
+    sudo adduser swarm
+    ```
+    ```sh
+    sudo usermod -aG sudo swarm
+    ```
+
+2. **Login** with `swarm`:
+    ```sh
+    su - swarm
+    ```
+
+3. Run the following commands to **download the repository**:
+    ```sh
+    cd / && sudo mkdir opt/hpe && cd opt/hpe && sudo chmod 777 -R /opt/hpe
+
+    ```
+    ```sh
+    git clone https://github.com/KatherLab/swarm-learning-hpe.git && cd swarm-learning-hpe
+    ```
+    ```sh
+    sudo chmod 777 -R /opt/hpe
+    ```
+
 ## Installing the License Server
 
+!!! warning
+    The license server must be provided by **only one** network member.
+
+1. Go to [MY HPE SOFTWARE CENTER](https://myenterpriselicense.hpe.com/cwp-ui/auth/login).
+
+2.  If you have the HPE Passport account, enter the credentials and **Sign In**. If you do not have it, create the HPE Passport Account and **Sign In**.
+
+3. After signing in, click **Software** from the left pane.
+   
+4. Locate Search and select **Product Info** from the Search Type dropdown, and search for **Swarm Learning**. Search results list the available Swarm Learning products.
+   
+5. **"HPE Swarm Learning Community edition"** is the evaluation version that you need to download. Click **Action** and select **Product Details** to view the Swarm Learning product details.
+
+6. Click **Installation** tab to view the **APLS** download link. Click the link here to view the APLS software downloads. Scroll down and view search results.
+   
+7. Download **AutoPass License Server**. To download, click Action and select **Get downloads**.
+   
+8. Click Download to copy the **APLS software** (apls-xx.xx.xx.zip) to your system.
+
+9.  **Extract zip** file in Downloads.
+    
+10. **Execute setup scrip**t:
+```sh
+cd Downloads/apls-9.12/UNIX
+chmod a+x setup.bin
+sudo ./setup.bin
+```
+
 !!! info
-    The license server must be provided by **only one** Consortium member.
+    When it is **successfully executed** the following appears:
+    ```sh
+    Pre-Installation Summary
+    ------------------------
 
-1.  After purchasing Swarm Learning from HPE, you will receive an email with a download link **Access Your Products**.
+    Please Review the Following Before Continuing:
 
-2.  From the email, click **Access Your Products**. You are redirected to [MY HPE SOFTWARE CENTER](https://myenterpriselicense.hpe.com/cwp-ui/auth/login).
+    Product Name:
+        HPE AutoPass License Server
 
-3.  If you have the HPE Passport account, enter the credentials and **Sign In**. If you do not have it, create the HPE Passport Account and **Sign In**.
+    Install Folder:
+        /opt/HP/HP AutoPass License Server
 
-    After signing in, you should see the Software Notification Message Receipt page listing the products.
+    Link Folder:
+        /usr/bin
 
-4.  Download APLS container and run it using the following procedures.
+    Java VM Installation Folder:
+        /opt/HP/HP AutoPass License Server/jre
+
+    Data Folder Directory
+        /var/opt/HP/HP AutoPass License Server
+
+    Product Version
+        9.12.0.0
+
+    Disk Space Information (for Installation Target): 
+        Required:      304.12 MegaBytes
+        Available: 420,910.62 MegaBytes
+    ```
+    ```sh
+    Congratulations HPE AutoPass License Server 9.12.0.0 has been successfully 
+    installed to:
+
+    /opt/HP/HP AutoPass License Server
+
+    HPE AutoPass License Server GUI can be accessed at :
+    https://<Host/IP address>:5814/autopass
+
+    HPE AutoPass License Server Service Usage:
+    hpLicenseServer {start|stop|restart|status}
+    ```
+
+11. **visit:** https://localhost:5000
+!!! info 
+    username: admin
+
+    password: password
+
+!!! bug "If service not working "
+    ```sh
+    cd "/opt/HP/HP AutoPass License Server/HP AutoPass License Server/HP AutoPass License Server/conf"
+    sudo nano server.xml
+    ```
+
+    Search with Strg + W for “5814” and replace it with “5000” and save.
+
+    ```sh
+    cd "/opt/HP/HP AutoPass License Server/HP AutoPass License Server/HP AutoPass License Server/bin"
+    sudo cp hpLicenseServer  /etc/init.d/hpLicenseServer
+    sudo chmod 755 /etc/init.d/hpLicenseServer
+    cd /etc/init.d
+    sudo update-rc.d hpLicenseServer defaults 97 03
+    service hpLicenseServer start
+    service hpLicenseServer status
+    ```
+    
+12.  In the APLS web GUI, go to **`License Management -> Install License`** and **note down the lock code**.
+
+!!! info
+    Lock Code = Serial Number
+
+13. Navigate to the [MY HPE SOFTWARE CENTER](https://myenterpriselicense.hpe.com/cwp-ui/auth/login) home page. After signing in with your HPE Passport credentials and perform the following actions:
+    
+    Click **Software** (left pane) -> Under **Search** Select "Product Info" -> enter the string "Swarm Learning".
+    
+    Under the search results, For the product "HPE-SWARM-CMT 1.1.0"-> Click on **Action** -> **Get License**
+
+ 
+2. Enter the lock code (Serial Number) you got from the **Install Licenses** page in the HPE Serial Number field and click **Activate**.
+3. Once you activate the licenses, you will see the **Download Files** page.
+4. Select and download the **keys and all the listed software files** (7 files).
+5. Install and manage the Swarm Learning license:
+    1. Open the APLS management console.
+    2. Select **License Management** -> **Install License**.
+    3. Select **Choose** file to upload the license file that you downloaded and click **Next**.
+    4. Select the required feature IDs and click **Install Licenses**.
+
+
+
+
+
+
+6. Download APLS container and run it using the following procedures.
 
     1.  Login to the HPE docker registry using your HPE Passport email id and password `hpe_eval`.
 
@@ -130,7 +308,7 @@ HPE Swarm Learning can run on any hardware that supports executing container sof
 
     **NOTE:** In case the APLS container does not work, then user can choose to install APLS software using the APLS installer. User can select the AutoPass License Server \(APLS\) Installer link under 'Additional Notes' and download the [APLS](https://myenterpriselicense.hpe.com/cwp-ui/free-software/APLS) software. To install the APLS software on a host machine \(Linux or Windows\), see *AutoPass License Server User Guide*, which is part of the downloaded APLS software.
 
-5. From a browser, access the APLS management console using the URL `https://<localhost>:5814` on the host machine where you installed the license server. 
+7.  From a browser, access the APLS management console using the URL `https://<localhost>:5814` on the host machine where you installed the license server. 
 
    The default user name is admin, and the password is password.
 
@@ -169,6 +347,11 @@ HPE Swarm Learning can run on any hardware that supports executing container sof
    4. Select the required feature IDs and click **Install Licenses**.
   
 ![APLS License Management](https://github.com/HewlettPackard/swarm-learning/blob/master/docs/Install/GUID-979617B4-8568-4BB7-A536-9B1E304A86CA-high.png?raw=true)
+
+!!! question
+    Did you find a **bug** in the code or other **problems**? Then raise an issue in our Github repository: [https://github.com/KatherLab/swarm-learning-hpe/issues](https://github.com/KatherLab/swarm-learning-hpe/issues)
+
+    In case of **problems or requests for improvement of the documentation**, please raise an issue at: [https://github.com/odelia-ai/odelia-ai.github.io/issues](https://github.com/odelia-ai/odelia-ai.github.io/issues)
 
 
 
