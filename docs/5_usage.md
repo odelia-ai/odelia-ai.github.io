@@ -100,7 +100,7 @@ Stop and remove all Swarm Learning containers and volumes that are no longer nee
     docker volume rm <volume-id>
     ```
 
-!!! question
+!!! question "Bugs and Problems"
     Did you find a **bug** in the code or other **problems**? Then raise an issue in our Github repository: [https://github.com/KatherLab/swarm-learning-hpe/issues](https://github.com/KatherLab/swarm-learning-hpe/issues)
 
     In case of **problems or requests for improvement of the documentation**, please raise an issue at: [https://github.com/odelia-ai/odelia-ai.github.io/issues](https://github.com/odelia-ai/odelia-ai.github.io/issues)
