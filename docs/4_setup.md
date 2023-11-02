@@ -8,8 +8,8 @@ status:
 # Setup
 
 !!! info "Please replace the `<placeholder>` with the corresponding value:"
-    - **`<workspace_name>`**: Name of the folder in `/opt/hpe/swarm-learning-hpe/workspace`` where the configuration files and model code is stored. e.g.: `odelia-breast-mri`
-    - **`<sentinel_ip>`**: IP address of the sentinel host. The sentinel host is the initiator of the network and the operator of the license server in our case. e.g.: `172.24.4.67``
+    - **`<workspace_name>`**: Name of the folder in `/opt/hpe/swarm-learning-hpe/workspace` where the configuration files and model code is stored. e.g.: `odelia-breast-mri`
+    - **`<sentinel_ip>`**: IP address of the sentinel host. The sentinel host is the initiator of the network and the operator of the license server in our case. e.g.: `172.24.4.67`
     - **`<host_index>`**: Name of the institution or partner participating in the training e.g.: `TUD`
   
 ## Installlation of HPE Swarm Learning
@@ -17,8 +17,7 @@ status:
 **Please only proceed to the next step by observing "... is done successfully" from the log.**
 
 !!! warning "/opt/hpe/swarm-learning-hpe"
-    Please make sure you are in `/opt/hpe/swarm-learning-hpe` before you start the installation. 
-    ``cd /opt/hpe/swarm-learning-hpe ``
+    Please make sure you are in `/opt/hpe/swarm-learning-hpe` before you start the installation. You can get there with `cd /opt/hpe/swarm-learning-hpe `.
 
 1. **Prerequisite**: Runs scripts that check for required software and opens exposed ports.
     ```sh
@@ -34,7 +33,7 @@ status:
     - The script will ask for the HPE credentials. Please use your [HPE Account](https://auth.hpe.com/hpe/cf/) credentials.
     - The script will also ask for the VPN credentials. We use GoodAccess VPN. ODELIA consortium members get their credentials through the contact persons at TU Dresden. External users are welcome to open an issue on Github if they have any questions.
 
-3. `Final setup`: Runs scripts that finalize the setup of the swarm learning environment. Only <> is required. The [-n num_peers] and [-e num_epochs] flags are optional.
+1. **Final setup**: Runs scripts that finalize the setup of the swarm learning environment. 
     ```sh
     sh workspace/automate_scripts/automate.sh -c -w <workspace_name> -s <sentinel_ip> -d <host_index> -l <license_ip> [-n num_peers] [-e num_epochs]
     ```

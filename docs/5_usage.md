@@ -8,8 +8,8 @@ status:
 # Usage
 
 !!! info "Please replace the `<placeholder>` with the corresponding value:"
-    - **`<workspace_name>`**: Name of the folder in `/opt/hpe/swarm-learning-hpe/workspace`` where the configuration files and model code is stored. e.g.: `odelia-breast-mri`
-    - **`<sentinel_ip>`**: IP address of the sentinel host. The sentinel host is the initiator of the network and the operator of the license server in our case. e.g.: `172.24.4.67``
+    - **`<workspace_name>`**: Name of the folder in `/opt/hpe/swarm-learning-hpe/workspace` where the configuration files and model code is stored. e.g.: `odelia-breast-mri`
+    - **`<sentinel_ip>`**: IP address of the sentinel host. The sentinel host is the initiator of the network and the operator of the license server in our case. e.g.: `172.24.4.67`
     - **`<host_index>`**: Name of the institution or partner participating in the training e.g.: `TUD`
 
 ## Data Preparation
