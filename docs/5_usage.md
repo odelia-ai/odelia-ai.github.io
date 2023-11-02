@@ -2,7 +2,7 @@
 title: Usage
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor
 icon: material/chart-donut
-status: new 
+status: 
 ---
 
 # Usage

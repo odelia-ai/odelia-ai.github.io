@@ -2,7 +2,7 @@
 title: Security
 description: add later
 icon: material/security
-status: new
+status:
 ---
 
 # Security

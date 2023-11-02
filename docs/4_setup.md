@@ -2,7 +2,7 @@
 title: Setup
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor
 icon: material/laptop
-status: new 
+status: 
 ---
 
 # Setup
