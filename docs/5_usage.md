@@ -99,8 +99,6 @@ Stop and remove all Swarm Learning containers and volumes that are no longer nee
     ```sh
     docker volume rm <volume-id>
     ```
-!!! warning
-    Models must have the same path on each device!
 
 !!! question
     Did you find a **bug** in the code or other **problems**? Then raise an issue in our Github repository: [https://github.com/KatherLab/swarm-learning-hpe/issues](https://github.com/KatherLab/swarm-learning-hpe/issues)
