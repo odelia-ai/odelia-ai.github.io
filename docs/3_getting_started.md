@@ -157,7 +157,7 @@ HPE recommends that you run each Swarm Network node, and Swarm Learning node on 
     
 10. **Execute setup scrip**t:
 ```sh
-cd Downloads/apls-9.12/UNIX
+cd Downloads/apls-X.x/UNIX
 chmod a+x setup.bin
 sudo ./setup.bin
 ```
@@ -211,7 +211,7 @@ sudo ./setup.bin
 
     password: password
 
-!!! bug "If service not working "
+!!! bug "If the service is not working "
     ```sh
     cd "/opt/HP/HP AutoPass License Server/HP AutoPass License Server/HP AutoPass License Server/conf"
     sudo nano server.xml
@@ -233,61 +233,23 @@ sudo ./setup.bin
 
 !!! info
     Lock Code = Serial Number
-
+![Lock code](https://github.com/HewlettPackard/swarm-learning/raw/master/docs/Install/GUID-A37C5798-B8B7-4B93-B786-A2682797AB37-high.png)
 13. Navigate to the [MY HPE SOFTWARE CENTER](https://myenterpriselicense.hpe.com/cwp-ui/auth/login) home page. After signing in with your HPE Passport credentials and perform the following actions:
     
     Click **Software** (left pane) -> Under **Search** Select "Product Info" -> enter the string "Swarm Learning".
     
-    Under the search results, For the product "HPE-SWARM-CMT 1.1.0"-> Click on **Action** -> **Get License**
+    Under the search results, For the product "HPE-SWARM-CMT x.x.x"-> Click on **Action** -> **Get License**
 
  
-2. Enter the lock code (Serial Number) you got from the **Install Licenses** page in the HPE Serial Number field and click **Activate**.
-3. Once you activate the licenses, you will see the **Download Files** page.
-4. Select and download the **keys and all the listed software files** (7 files).
-5. Install and manage the Swarm Learning license:
+13. Enter the lock code (Serial Number) you got from the **Install Licenses** page in the HPE Serial Number field and click **Activate**.
+14. Once you activate the licenses, you will see the **Download Files** page.
+15. Select and download the **keys and all the listed software files** (7 files).
+16. Install and manage the Swarm Learning license:
     1. Open the APLS management console.
     2. Select **License Management** -> **Install License**.
     3. Select **Choose** file to upload the license file that you downloaded and click **Next**.
     4. Select the required feature IDs and click **Install Licenses**.
-
-6.  From a browser, access the APLS management console using the URL `https://<localhost>:5814` on the host machine where you installed the license server. 
-
-   The default user name is admin, and the password is password.
-
-<blockquote>
-    NOTE: These instructions assume that the host IP of license server is <localhost\> and the external port is 5814. Host IP is the IP of the system where the license server is running. Modify these values to match the actual IP and external port on your system.
-
-</blockquote>
-    
-   If the web browser cannot connect to the APLS management console, check your network proxy settings and firewall policies. Consider techniques like port forwarding to work around firewall policies. If necessary, work with your network administrator to diagnose and resolve connectivity problems.
-
-6. In the APLS web GUI, go to **License Management** -\> **Install License** and note down the lock code. 
    
-   ![Lock code](https://github.com/HewlettPackard/swarm-learning/raw/master/docs/Install/GUID-A37C5798-B8B7-4B93-B786-A2682797AB37-high.png)
-
-7.  Go to the Software Notification Message Receipt page and click **Access Your Products**.
-
-    You will be navigated to the [MY HPE SOFTWARE CENTER](https://myenterpriselicense.hpe.com/cwp-ui/auth/login) home page. After signing in with your HPE Passport credentials, you will see the **Activate** page.
-
-8.  Activate the license:
-
-    1.  Select the number of licenses to activate and click **Next**.
-
-        **NOTE:** You can select the number of licenses to be installed on the host machines. For example, if you have 5 licenses, you can install 2 on Windows, and 3 on Linux machines.
-
-    2.  Designate yourself or for another user for activation. Click **Next**.
-
-    3.  Enter the lock code you got from the **Install Licenses** page in the HPE Serial Number field and click **Activate**.
-
-9. Once you activate the licenses, you will see the **Download Files** page. Select the keys and the software and download them. 
-
-10. Install and manage the Swarm Learning license:
-    
-   1. Open the APLS management console. 
-   2. Select **License Management** -\> **Install License**. 
-   3. Select **Choose** file to upload the license file that you downloaded and click **Next**. 
-   4. Select the required feature IDs and click **Install Licenses**.
-  
 ![APLS License Management](https://github.com/HewlettPackard/swarm-learning/blob/master/docs/Install/GUID-979617B4-8568-4BB7-A536-9B1E304A86CA-high.png?raw=true)
 
 !!! question "Bugs and Problems"
