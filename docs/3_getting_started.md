@@ -229,11 +229,13 @@ sudo ./setup.bin
     service hpLicenseServer status
     ```
     
-12.  In the APLS web GUI, go to **`License Management -> Install License`** and **note down the lock code**.
+12.   In the APLS web GUI, go to **`License Management -> Install License`** and **note down the lock code**.
 
 !!! info
     Lock Code = Serial Number
+
 ![Lock code](https://github.com/HewlettPackard/swarm-learning/raw/master/docs/Install/GUID-A37C5798-B8B7-4B93-B786-A2682797AB37-high.png)
+
 13. Navigate to the [MY HPE SOFTWARE CENTER](https://myenterpriselicense.hpe.com/cwp-ui/auth/login) home page. After signing in with your HPE Passport credentials and perform the following actions:
     
     Click **Software** (left pane) -> Under **Search** Select "Product Info" -> enter the string "Swarm Learning".
