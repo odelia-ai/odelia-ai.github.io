@@ -135,7 +135,7 @@ HPE recommends that you run each Swarm Network node, and Swarm Learning node on 
 ## Installing the License Server
 
 !!! warning
-    The license server must be provided by **only one** network member.
+    The license server must be provided by **only one** network member (Sentinel Node).
 
 1. Go to [MY HPE SOFTWARE CENTER](https://myenterpriselicense.hpe.com/cwp-ui/auth/login).
 
@@ -250,65 +250,7 @@ sudo ./setup.bin
     3. Select **Choose** file to upload the license file that you downloaded and click **Next**.
     4. Select the required feature IDs and click **Install Licenses**.
 
-
-
-
-
-
-6. Download APLS container and run it using the following procedures.
-
-    1.  Login to the HPE docker registry using your HPE Passport email id and password `hpe_eval`.
-
-        ``` 
-        docker login hub.myenterpriselicense.hpe.com -u <HPE-PASSPORT-EMAIL-ID> -p hpe_eval
-        ```
-
-    2.  Enable Docker content trust.
-
-        ```
-        export DOCKER_CONTENT_TRUST=1
-        ```
-
-    3.  Pull the image with a tag.
-
-        ```
-        docker pull hub.myenterpriselicense.hpe.com/hpe_eval/autopass/apls:9.14
-        ```
-
-    4.  Configure Data persistence.
-
-        In order to retain configurations and installed licenses across containers, HPE recommends you to create a volume to persist the /hpe directory. This directory contains the following details:
-
-        |Image Directory                 |Subdirectories    |Description                                                                                                                                                                                                |
-        |--------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-        |/hpe|AutoPass/LicenseServer/data|..data/conf       |License server configuration directory. Contains database, logs and configuration files required to persist setup across containers transactions such as restarts, deletion or upgrades to new image tags. |
-        |                                |..data/log        |                                                                                                                                                                                                           |
-        |                                | ..data/database  |
- 
-        HPE recommends you to create the volume using the docker volume create command and assign a volume name such as `apls-volume`, as follows:
-
-        ```
-        docker volume create apls-volume
-        ```
-
-    5.  Create and run the APLS container.
-
-    To run the APLS Docker container, user can use `docker cli` using the following instructions:
-
-    **Docker CLI**
-
-    ```
-    docker run -d \
-    --name apls \
-    -v apls-volume:/hpe \
-    -p 5814:5814 \
-    --restart unless-stopped \
-    hub.myenterpriselicense.hpe.com/hpe_eval/autopass/apls:9.14
-    ```
-
-    **NOTE:** In case the APLS container does not work, then user can choose to install APLS software using the APLS installer. User can select the AutoPass License Server \(APLS\) Installer link under 'Additional Notes' and download the [APLS](https://myenterpriselicense.hpe.com/cwp-ui/free-software/APLS) software. To install the APLS software on a host machine \(Linux or Windows\), see *AutoPass License Server User Guide*, which is part of the downloaded APLS software.
-
-7.  From a browser, access the APLS management console using the URL `https://<localhost>:5814` on the host machine where you installed the license server. 
+6.  From a browser, access the APLS management console using the URL `https://<localhost>:5814` on the host machine where you installed the license server. 
 
    The default user name is admin, and the password is password.
 
