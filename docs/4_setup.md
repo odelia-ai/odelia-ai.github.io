@@ -1,6 +1,6 @@
 ---
 title: Setup
-description: Nullam urna elit, malesuada eget finibus ut, ac tortor
+description: Step-by-step installation guide for HPE Swarm Learning after meeting all requirements
 icon: material/laptop
 status: 
 ---
@@ -14,18 +14,6 @@ status:
   
 ## Installlation of HPE Swarm Learning
 
-**Please replace the `<placeholder>` with the corresponding value**
-
-
-- `<sentinel_ip>` = `172.24.4.67` It's the IP assigned by VPN server for Sentinal.
-
-- `<license_ip>` = `172.24.4.73` It's the IP assigned by VPN server for License Server.
-
-- `<host_index>` =  `swarm1`, `swarm2` or `swarm3`. It's the the name of the host.
-
-- `<workspace_name>` = `odelia-breast-mri` It's the name of the workspace, where all the code is stored.
-  
-
 **Please only proceed to the next step by observing "... is done successfully" from the log**
 
 1. `Prerequisite`: Runs scripts that check for required software and opens exposed ports.
@@ -35,7 +23,7 @@ status:
 
 2. Copy  VPN configuration file from `Data` Drive `odelia_summer_school/vpn/swarmX.ovpn` to `opt/hpe/swarm-learning-hpe/assets/openvpn_configs/good_access`
 
-2. `Server setup`: Runs scripts that sets up the swarm learning environment on a server.
+3. `Server setup`: Runs scripts that sets up the swarm learning environment on a server.
     ```sh
     sh workspace/automate_scripts/automate.sh -b -s <sentinel_ip> -d <host_index>
     ```
