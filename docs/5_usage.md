@@ -10,9 +10,9 @@ status:
 !!! info "Information to be replaced"
     Please replace the `<placeholder>` with the corresponding value:
 
-    - `<workspace_name``>: Name of the folder in `/opt/hpe/swarm-learning-hpe/workspace`` where the configuration files and model code is stored. e.g.: `odelia-breast-mri`
-    - `<sentinel_ip>`: IP address of the sentinel host. The sentinel host is the initiator of the network and the operator of the license server in our case. e.g.: `172.24.4.67``
-    - `<host_index>`: Name of the institution or partner participating in the training e.g.: `TUD`
+    - *`<workspace_name>`*: Name of the folder in `/opt/hpe/swarm-learning-hpe/workspace`` where the configuration files and model code is stored. e.g.: `odelia-breast-mri`
+    - *`<sentinel_ip>`*: IP address of the sentinel host. The sentinel host is the initiator of the network and the operator of the license server in our case. e.g.: `172.24.4.67``
+    - *`<host_index>`*: Name of the institution or partner participating in the training e.g.: `TUD`
 
 ## Data Preparation
 
@@ -43,7 +43,7 @@ status:
 !!! info "SN node"
     SN nodes form the blockchain network. The current version of Swarm Learning uses an open-source version of Ethereum as the underlying blockchain platform. The SN nodes interact with each other using this blockchain platform to maintain and track progress. The SN nodes use this state and progress information to co-ordinate the working of the other swarm learning components. **Sentinel Node** is a special SN node. The Sentinel node is responsible for initializing the blockchain network. This is the first node to start.
     >NOTE: Only metadata is written to the blockchain. The model itself is not stored in the blockchain.
-    
+
 ```sh
 ./workspace/automate_scripts/launch_sl/run_sn.sh -s <sentinel_ip> -d <host_index>
 ```
