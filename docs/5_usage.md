@@ -1,11 +1,17 @@
 ---
 title: Usage
-description: Nullam urna elit, malesuada eget finibus ut, ac tortor
+description: A step by step guide to starting and stopping Swarm Learning after setup.
 icon: material/chart-donut
 status: 
 ---
 
 # Usage
+
+!!! info "Information to be replaced"
+    Please replace the `<placeholder>` with the corresponding value:
+    - `<workspace_name``>: Name of the folder in `/opt/hpe/swarm-learning-hpe/workspace`` where the configuration files and model code is stored. e.g.: `odelia-breast-mri`
+    - `<sentinel_ip>`: IP address of the sentinel host. The sentinel host is the initiator of the network and the operator of the license server in our case. e.g.: `172.24.4.67``
+    - `<host_index>`: Name of the institution or partner participating in the training e.g.: `TUD`
 
 ## Data Preparation
 
@@ -13,7 +19,7 @@ status:
 
 1. Create the folder structure for storing the data as follows:
     ```sh
-    cd workspace/odelia-breast-mri/
+    cd /opt/hpe/swarm-learning-hpe/workspace/<workspace_name>
     ```
     ```sh
     mkdir user && mkdir user/data-and-scratch && mkdir user/data-and-scratch/data && mkdir user/data-and-scratch/scratch && chmod 777 -R /opt/hpe
@@ -22,7 +28,7 @@ status:
     cd /opt/hpe/swarm-learning-hpe
     ```
 
-2. Copy `DUKE` from `Data` Drive `odelia_summer_school/data/swarmX` to `opt/hpe/swarm-learning-hpe/workspace/odelia-reast-mri/user/data-and-scratch/data`
+2. Copy your Data to `opt/hpe/swarm-learning-hpe/workspace/<workspace_name>/user/data-and-scratch/data`
 
 ## Running Swarm Learning Nodes
 
@@ -38,7 +44,7 @@ status:
 
    >NOTE: Only metadata is written to the blockchain. The model itself is not stored in the blockchain.
     ```sh
-    ./workspace/automate_scripts/launch_sl/run_sn.sh -s <sentinel_ips> -d <host_index> -l <license_ip>
+    ./workspace/automate_scripts/launch_sl/run_sn.sh -s <sentinel_ip> -d <host_index>
     ```
 
 ### 2. Run a Swarm SWOP (Swarm Operator) node:
@@ -46,7 +52,7 @@ status:
     SWOP is an agent that can manage Swarm Learning operations. SWOP is responsible to execute tasks that are assigned to it. A SWOP node can execute only one task at a time. SWOP helps in executing tasks such as starting and stopping Swarm runs, building and upgrading ML containers, and sharing models for training.
 
 ```sh
-./workspace/automate_scripts/launch_sl/run_swop.sh -w <workspace_name> -s <sentinel_ip>  -d <host_index> -l <license_ip>
+./workspace/automate_scripts/launch_sl/run_swop.sh -w <workspace_name> -s <sentinel_ip>  -d <host_index>
 ```
 
 ### 3. Run a Swarm SWCI 
@@ -55,7 +61,7 @@ status:
 !!! warning 
     SWCI node is used to generate training task runners, could be initiated by any host, but currently we suggest **ONLY THE SENTINEL HOST IS ALLOWED TO INITIATE**
 ```sh
-./workspace/automate_scripts/launch_sl/run_swci.sh -w <workspace_name> -s <sentinel_ip>  -d <host_index> -l <license_ip>
+./workspace/automate_scripts/launch_sl/run_swci.sh -w <workspace_name> -s <sentinel_ip>  -d <host_index>
 ```
 
 ## Results
@@ -73,7 +79,7 @@ Stop and remove all Swarm Learning containers and volumes that are no longer nee
 ./workspace/swarm_learning_scripts/stop-swarm --[node_type]
 ```
 !!! info
-    --[node_type] is optional, if not specified, all the nodes will be stopped. Otherwise, could specify --sn, --swop, --swci, --sl for example.
+    --[node_type] is optional, if not specified, all the nodes will be stopped. Otherwise, specify --sn, --swop, --swci, --sl.
 
 !!! tip "Manually Remove containers and volumes"
     1. List all Docker containers:
