@@ -1,6 +1,6 @@
 ---
 title: Setup
-description: Step-by-step installation guide for HPE Swarm Learning after meeting all requirements
+description: Step-by-step installation guide for HPE Swarm Learning after meeting all requirements.
 icon: material/laptop
 status: 
 ---
@@ -14,38 +14,33 @@ status:
   
 ## Installlation of HPE Swarm Learning
 
-**Please only proceed to the next step by observing "... is done successfully" from the log**
+**Please only proceed to the next step by observing "... is done successfully" from the log.**
 
-1. `Prerequisite`: Runs scripts that check for required software and opens exposed ports.
+!!! warning "/opt/hpe/swarm-learning-hpe"
+    Please make sure you are in `/opt/hpe/swarm-learning-hpe` before you start the installation. 
+    ``cd /opt/hpe/swarm-learning-hpe ``
+
+1. **Prerequisite**: Runs scripts that check for required software and opens exposed ports.
     ```sh
     sh workspace/automate_scripts/automate.sh -a
     ```
 
-2. Copy  VPN configuration file from `Data` Drive `odelia_summer_school/vpn/swarmX.ovpn` to `opt/hpe/swarm-learning-hpe/assets/openvpn_configs/good_access`
-
-3. `Server setup`: Runs scripts that sets up the swarm learning environment on a server.
+2. **Server setup**: Runs scripts that sets up the swarm learning environment on a server.
     ```sh
     sh workspace/automate_scripts/automate.sh -b -s <sentinel_ip> -d <host_index>
     ```
-    - The script will ask for the HPE credentials. Please use the following credentials:
-        - E-Mail:    
-        - Password: 
-  
-    - The script will also ask for the VPN credentials. Please use the following credentials:
-        | IP-Address  | Host Index  | vpn-account  | password |
-        |---|---|---| --- |
-        |
 
-    - The Ip-Address should now be shown with:
-        ```sh
-        hostname -I
-        ```
-
+!!! info "Credentials"
+    - The script will ask for the HPE credentials. Please use your [HPE Account](https://auth.hpe.com/hpe/cf/) credentials.
+    - The script will also ask for the VPN credentials. We use GoodAccess VPN. ODELIA consortium members get their credentials through the contact persons at TU Dresden. External users are welcome to open an issue on Github if they have any questions.
 
 3. `Final setup`: Runs scripts that finalize the setup of the swarm learning environment. Only <> is required. The [-n num_peers] and [-e num_epochs] flags are optional.
     ```sh
     sh workspace/automate_scripts/automate.sh -c -w <workspace_name> -s <sentinel_ip> -d <host_index> -l <license_ip> [-n num_peers] [-e num_epochs]
     ```
+!!! info "Optional flags"
+    - **`-n num_peers`**: Number of peers to be added to the network. e.g.: `3`
+    - **`-e num_epochs`**: Number of epochs to be trained. e.g.: `10`
 
 !!! question "Bugs and Problems"
     Did you find a **bug** in the code or other **problems**? Then raise an issue in our Github repository: [https://github.com/KatherLab/swarm-learning-hpe/issues](https://github.com/KatherLab/swarm-learning-hpe/issues)

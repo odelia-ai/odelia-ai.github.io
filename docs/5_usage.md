@@ -57,13 +57,16 @@ status:
 ### 3. Run a Swarm SWCI 
 !!! info "SWCI"
     Swarm Learning Command Line Interface (SWCI) is the command interface tool to the Swarm Learning framework. It is used to view the status, control, and manage the Swarm Learning framework. SWCI manages the Swarm Learning framework using contexts and contracts.
+
 !!! warning 
     SWCI node is used to generate training task runners, could be initiated by any host, but currently we suggest **ONLY THE SENTINEL HOST IS ALLOWED TO INITIATE**
+
 ```sh
 ./workspace/automate_scripts/launch_sl/run_swci.sh -w <workspace_name> -s <sentinel_ip>  -d <host_index>
 ```
 
 ## Results
+
 !!! tip "Check the logs from training"
     ```sh
     ./workspace/automate_scripts/launch_sl/check_latest_log.sh
