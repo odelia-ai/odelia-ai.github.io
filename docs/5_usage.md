@@ -42,11 +42,11 @@ status:
 ### 1. Run a Swarm Network (or Sentinel) node:
 !!! info "SN node"
     SN nodes form the blockchain network. The current version of Swarm Learning uses an open-source version of Ethereum as the underlying blockchain platform. The SN nodes interact with each other using this blockchain platform to maintain and track progress. The SN nodes use this state and progress information to co-ordinate the working of the other swarm learning components. **Sentinel Node** is a special SN node. The Sentinel node is responsible for initializing the blockchain network. This is the first node to start.
-
-   >NOTE: Only metadata is written to the blockchain. The model itself is not stored in the blockchain.
-    ```sh
-    ./workspace/automate_scripts/launch_sl/run_sn.sh -s <sentinel_ip> -d <host_index>
-    ```
+    >NOTE: Only metadata is written to the blockchain. The model itself is not stored in the blockchain.
+    
+```sh
+./workspace/automate_scripts/launch_sl/run_sn.sh -s <sentinel_ip> -d <host_index>
+```
 
 ### 2. Run a Swarm SWOP (Swarm Operator) node:
 !!! info "SWOP"
