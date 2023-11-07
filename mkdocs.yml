@@ -104,10 +104,10 @@ nav:
   - Setup: setup.md
   - Usage: usage.md
   - Security: security.md
-  
+
 copyright: >
-  Copyright &copy; 2023 ODELIA Consortium –
-  <a href="#__consent">Change cookie settings</a> 
+  &copy; 2023 ODELIA Consortium –
+  <a href="https://odelia-ai.github.io/imprint/">Imprint</a> <a href="https://odelia-ai.github.io/privacy-policy/">Privacy Policy</a> <a href="#__consent">Change cookie settings</a> 
 
 extra_css:
   - assets/css/extra.css
