@@ -97,9 +97,17 @@ extra:
   status:
     <identifier>: <description>
 
+nav:
+  - Home: index.md
+  - Background: background.md
+  - Getting Started: getting-started.md
+  - Setup: setup.md
+  - Usage: usage.md
+  - Security: security.md
+  
 copyright: >
   Copyright &copy; 2023 ODELIA Consortium –
-  <a href="#__consent">Change cookie settings</a>
+  <a href="#__consent">Change cookie settings</a> 
 
 extra_css:
   - assets/css/extra.css
