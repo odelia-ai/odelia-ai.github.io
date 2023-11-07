@@ -41,15 +41,17 @@ status:
     - **`-n num_peers`**: Number of peers to be added to the network. e.g.: `3`
     - **`-e num_epochs`**: Number of epochs to be trained. e.g.: `10`
 
-!!! question "Bugs and Problems"
-    Did you find a **bug** in the code or other **problems**? Then raise an issue in our Github repository: [https://github.com/KatherLab/swarm-learning-hpe/issues](https://github.com/KatherLab/swarm-learning-hpe/issues)
-
-    In case of **problems or requests for improvement of the documentation**, please raise an issue at: [https://github.com/odelia-ai/odelia-ai.github.io/issues](https://github.com/odelia-ai/odelia-ai.github.io/issues)
-
 ## Upgrade the Swarm Learning Environment
 
 1. If you already have the old version of Swarm learning installed. Run the following command to upgrade the Swarm Learning Environment from 1.x.x to 2.x.x
 ```sh
 $ sh workspace/automate_scripts/server_setup/cleanup_old_sl.sh
 ```
+
 Then proceed to 1. `Prerequisite` in the installation guide.
+!!! question "Bugs and Problems"
+    Did you find a **bug** in the code or other **problems**? Then raise an issue in our Github repository: [https://github.com/KatherLab/swarm-learning-hpe/issues](https://github.com/KatherLab/swarm-learning-hpe/issues)
+
+    In case of **problems or requests for improvement of the documentation**, please raise an issue at: [https://github.com/odelia-ai/odelia-ai.github.io/issues](https://github.com/odelia-ai/odelia-ai.github.io/issues)
+
+
