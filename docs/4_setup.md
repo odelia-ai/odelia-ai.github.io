@@ -20,14 +20,14 @@ status:
     Please make sure you are in `/opt/hpe/swarm-learning-hpe` before you start the installation. You can get there with `cd /opt/hpe/swarm-learning-hpe `.
 
 ### 1. Prerequisite: 
-**Runs scripts that check for required software and opens exposed ports.**
+Runs scripts that check for required software and opens exposed ports.
 
     ```sh
     sh workspace/automate_scripts/automate.sh -a
     ```
 
 ### 2. Server setup: 
-**Runs scripts that sets up the swarm learning environment on a server.**
+Runs scripts that sets up the swarm learning environment on a server.
 
     ```sh
     sh workspace/automate_scripts/automate.sh -b -s <sentinel_ip> -d <host_index>
@@ -38,7 +38,7 @@ status:
     - The script will also ask for the VPN credentials. We use GoodAccess VPN. ODELIA consortium members get their credentials through the contact persons at TU Dresden. External users are welcome to open an issue on Github if they have any questions.
 
 ### 3. Final setup: 
-**Runs scripts that finalize the setup of the swarm learning environment.**
+Runs scripts that finalize the setup of the swarm learning environment.
 
     ```sh
     sh workspace/automate_scripts/automate.sh -c -w <workspace_name> -s <sentinel_ip> -d <host_index> -l <license_ip> [-n num_peers] [-e num_epochs]
