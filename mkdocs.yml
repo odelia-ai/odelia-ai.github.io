@@ -107,7 +107,7 @@ nav:
 
 copyright: >
   &copy; 2023 ODELIA Consortium –
-  <a href="https://odelia-ai.github.io/imprint/">Imprint</a> <a href="https://odelia-ai.github.io/privacy-policy/">Privacy Policy</a> <a href="#__consent">Change cookie settings</a> 
+  <a href="https://odelia-ai.github.io/imprint/">Imprint</a> <a href="https://odelia-ai.github.io/privacy-policy/">Privacy policy</a> <a href="#__consent">Change cookie settings</a> 
 
 extra_css:
   - assets/css/extra.css
