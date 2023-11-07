@@ -22,16 +22,16 @@ status:
 ### 1. Prerequisite: 
 Runs scripts that check for required software and opens exposed ports.
 
-    ```sh
-    sh workspace/automate_scripts/automate.sh -a
-    ```
+```sh
+sh workspace/automate_scripts/automate.sh -a
+```
 
 ### 2. Server setup: 
 Runs scripts that sets up the swarm learning environment on a server.
 
-    ```sh
-    sh workspace/automate_scripts/automate.sh -b -s <sentinel_ip> -d <host_index>
-    ```
+```sh
+sh workspace/automate_scripts/automate.sh -b -s <sentinel_ip> -d <host_index>
+```
 
 !!! info "Credentials"
     - The script will ask for the HPE credentials. Please use your [HPE Account](https://auth.hpe.com/hpe/cf/) credentials.
@@ -40,9 +40,9 @@ Runs scripts that sets up the swarm learning environment on a server.
 ### 3. Final setup: 
 Runs scripts that finalize the setup of the swarm learning environment.
 
-    ```sh
-    sh workspace/automate_scripts/automate.sh -c -w <workspace_name> -s <sentinel_ip> -d <host_index> -l <license_ip> [-n num_peers] [-e num_epochs]
-    ```
+```sh
+sh workspace/automate_scripts/automate.sh -c -w <workspace_name> -s <sentinel_ip> -d <host_index> -l <license_ip> [-n num_peers] [-e num_epochs]
+```
 
 !!! info "Optional flags"
     - **`-n num_peers`**: Number of peers to be added to the network. e.g.: `3`
@@ -52,7 +52,7 @@ Runs scripts that finalize the setup of the swarm learning environment.
 
 1. If you already have the old version of Swarm learning installed. Run the following command to upgrade the Swarm Learning Environment from 1.x.x to 2.x.x
 ```sh
-$ sh workspace/automate_scripts/server_setup/cleanup_old_sl.sh
+sh workspace/automate_scripts/server_setup/cleanup_old_sl.sh
 ```
 
 1. Then proceed to [1. Prerequisite](#1-prerequisite) in the installation guide.
