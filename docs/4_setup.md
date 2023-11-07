@@ -33,7 +33,7 @@ status:
     - The script will ask for the HPE credentials. Please use your [HPE Account](https://auth.hpe.com/hpe/cf/) credentials.
     - The script will also ask for the VPN credentials. We use GoodAccess VPN. ODELIA consortium members get their credentials through the contact persons at TU Dresden. External users are welcome to open an issue on Github if they have any questions.
 
-1. **Final setup**: Runs scripts that finalize the setup of the swarm learning environment. 
+3. **Final setup**: Runs scripts that finalize the setup of the swarm learning environment. 
     ```sh
     sh workspace/automate_scripts/automate.sh -c -w <workspace_name> -s <sentinel_ip> -d <host_index> -l <license_ip> [-n num_peers] [-e num_epochs]
     ```
@@ -45,3 +45,11 @@ status:
     Did you find a **bug** in the code or other **problems**? Then raise an issue in our Github repository: [https://github.com/KatherLab/swarm-learning-hpe/issues](https://github.com/KatherLab/swarm-learning-hpe/issues)
 
     In case of **problems or requests for improvement of the documentation**, please raise an issue at: [https://github.com/odelia-ai/odelia-ai.github.io/issues](https://github.com/odelia-ai/odelia-ai.github.io/issues)
+
+## Upgrade the Swarm Learning Environment
+
+1. If you already have the old version of Swarm learning installed. Run the following command to upgrade the Swarm Learning Environment from 1.x.x to 2.x.x
+```sh
+$ sh workspace/automate_scripts/server_setup/cleanup_old_sl.sh
+```
+Then proceed to 1. `Prerequisite` in the installation guide.

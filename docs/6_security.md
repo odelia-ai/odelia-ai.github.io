@@ -25,6 +25,13 @@ The connection between devices is **encrypted via a Virtual Private Network (VPN
 
 Only participants who have been **pre-verified using certificates** can actively participate in the Swarm Learning process. This stringent verification process ensures that only authenticated and authorized individuals are part of the training process.
 
+## VPN Structure
+### VPN overview
+![VPN overview](assets/images/vpn_overview.png)
+
+### VPN general structure
+![VPN general structure](assets/images/vpn_general_structure.png)
+
 !!! info 
     Detailed guidelines and further insights into security practices with Swarm Learning, will follow.
 
