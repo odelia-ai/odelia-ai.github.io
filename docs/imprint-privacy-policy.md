@@ -90,7 +90,7 @@ United States
 
 This is the recipient of your personal data. This corresponds to our legitimate interest within the meaning of Art. 6 para. 1 sentence 1 lit. f GDPR in not having to maintain a server on our premises ourselves. Server location is USA.
 
-Further information on objection and removal options vis-à-vis GitHub can be found at: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages
+Further information on objection and removal options vis-à-vis GitHub can be found at: [https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages)
 
 You have the right to object to the processing. Whether the objection is successful must be determined as part of a balancing of interests.
 
@@ -98,7 +98,7 @@ The data will be deleted as soon as the purpose of the processing no longer appl
 
 The processing of the data specified in this section is not required by law or contract. The functionality of the website is not guaranteed without the processing.
 
-GitHub has implemented compliance measures for international data transfers. These apply to all global activities where GitHub processes personal data of natural persons in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs). Further information can be found at: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1-the-standard-contractual-clauses-processors
+GitHub has implemented compliance measures for international data transfers. These apply to all global activities where GitHub processes personal data of natural persons in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs). Further information can be found at: [https://docs.github.com/en/free-pro-team@latest/github/site-policy/](https://docs.github.com/en/free-pro-team@latest/github/site-policy/)
 
 ### Google Analytics 4
 
@@ -143,7 +143,7 @@ Alphabet Inc, 1600 Amphitheatre Parkway Mountain View, CA 94043, USA
 
 For the USA, the European Commission adopted its adequacy decision on July 10, 2023. Google LLC is certified under the EU-US Privacy Framework. Since Google servers are distributed worldwide and a transfer to third countries (for example to Singapore) cannot be completely ruled out, we have also concluded the EU standard contractual clauses with the provider.
 
-The data sent by us and linked to cookies is automatically deleted after 2 [OR: 14 months]. The maximum lifespan of Google Analytics cookies is 2 years. Data whose retention period has been reached is automatically deleted once a month.
+The data sent by us and linked to cookies is automatically deleted after 2. The maximum lifespan of Google Analytics cookies is 2 years. Data whose retention period has been reached is automatically deleted once a month.
 
 The legal basis for this data processing is your consent in accordance with Art. 6 para. 1 sentence 1 lit. a GDPR and § 25 para. 1 sentence 1 TTDSG.
 
