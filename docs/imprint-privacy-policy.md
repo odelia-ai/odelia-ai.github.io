@@ -14,6 +14,7 @@ EIBIR gemeinnützige GmbH
 Am Gestade
 1010 Vienna
 Austria
+
 Website: https://odelia.ai
 Email: gro.ribie@ekebedrogp
 Phone number: +4315334064323
@@ -59,16 +60,13 @@ In terms of function, a distinction must be made between technically necessary a
 Technically necessary cookies
 Here you will find all cookies that are required for the operation of our website and its functions (technically necessary cookies). These are usually set in response to an action you have taken. These include registration, login or settings such as language or cookie preferences. It is possible to deactivate these cookies in the browser. In this case, we can no longer guarantee that our website will function properly.
 
-Cookie name Host type Purpose processed data Third-party service Validity period Target country
-
-
+- 
 
 Cookies that are not technically necessary
 Here you will find all cookies that are not absolutely necessary for the operation of our website and its functions (technically unnecessary cookies). The use of such cookies constitutes data processing that is only permitted with your active consent (Art. 6 para. 1 sentence 1 lit. a GDPR). This also applies to the transfer of your personal data to third parties.
 
-| Cookie name | Purpose |
-| _ga  | This cookie is used by Google Analytics to distinguish unique users by assigning a randomly generated number as a client identifier. It is included in each page request in a site and used to calculate visitor, session and campaign data for the site's analytics reports. |			
-| _ga_MVCEFS3QLE | This cookie is used by Google Analytics to distinguish unique users by assigning a randomly generated number as a client identifier. It is included in each page request in a site and used to calculate visitor, session and campaign data for the site's analytics reports. |	
+- ga: This cookie is used by Google Analytics to distinguish unique users by assigning a randomly generated number as a client identifier. It is included in each page request in a site and used to calculate visitor, session and campaign data for the site's analytics reports.		
+- _ga_MVCEFS3QLE: This cookie is used by Google Analytics to distinguish unique users by assigning a randomly generated number as a client identifier. It is included in each page request in a site and used to calculate visitor, session and campaign data for the site's analytics reports.	
  	 	 	 	 	 	 	 
 You can delete individual or all cookies via your browser settings. You also have the option of generally deactivating cookies or restricting them to certain domains via your browser settings.
 
@@ -83,10 +81,12 @@ There is no tracking and we do not have direct access to this data, but only rec
 
 We use the following hoster for the provision of our website:
 
+```
 GitHub Inc.
 88 Colin P Kelly Jr St
 San Francisco, CA 94107
 United States
+```
 
 This is the recipient of your personal data. This corresponds to our legitimate interest within the meaning of Art. 6 para. 1 sentence 1 lit. f GDPR in not having to maintain a server on our premises ourselves. Server location is USA.
 
@@ -135,9 +135,11 @@ On behalf of the operator of this website, Google will use this information to e
 
 Recipients of the data are/may be
 
+```
 Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland (as processor pursuant to Art. 28 GDPR)
 Google LLC, 1600 Amphitheatre Parkway Mountain View, CA 94043, USA
 Alphabet Inc, 1600 Amphitheatre Parkway Mountain View, CA 94043, USA
+```
 
 For the USA, the European Commission adopted its adequacy decision on July 10, 2023. Google LLC is certified under the EU-US Privacy Framework. Since Google servers are distributed worldwide and a transfer to third countries (for example to Singapore) cannot be completely ruled out, we have also concluded the EU standard contractual clauses with the provider.
 
